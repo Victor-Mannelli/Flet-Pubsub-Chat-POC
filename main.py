@@ -8,18 +8,18 @@ def main(page):
   username = ft.TextField(label="Your Name")
 
   def sendMessageToChannel(message):
-      #? gets message type to differ from users joining chat from actual messages
-      type = message["type"]
-      if type == "message":
-        user_message = message["user"]
-        text_message = message["text"]
-        #? adds message to chat column
-        chat.controls.append(ft.Text(f"{user_message}: {text_message}"))
-      else:
-        user_message = message["user"]
-        chat.controls.append(
-          ft.Text(f"{user_message} entrou no chat", size=12, italic=True, color=ft.colors.ORANGE_500)
-        )
+    #? gets message type to differ from users joining chat from actual messages
+    type = message["type"]
+    if type == "message":
+      user_message = message["user"]
+      text_message = message["text"]
+      #? adds message to chat column
+      chat.controls.append(ft.Text(f"{user_message}: {text_message}"))
+    else:
+      user_message = message["user"]
+      chat.controls.append(
+        ft.Text(f"{user_message} entrou no chat", size=12, italic=True, color=ft.colors.ORANGE_500)
+      )
       page.update()
 
   #? creates pubsub channel
