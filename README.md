@@ -25,7 +25,6 @@ The chat is implemented within a website; Instructions on installing and configu
 - Python
 - Flet (for web application framework)
 - Pubsub (for real-time communication)
-- etc. (add any additional technologies used)
 
 ## Contributing
 
